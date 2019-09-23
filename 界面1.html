@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        #header{
+            height: 15px;
+            width: 100%;
+            background-color: white;
+        }
+        #yellow{
+            height: 10px;
+            position: absolute;
+            margin-left: 86px;
+            width: 10px;
+            margin-top: -5px;
+        }
+        #name{
+            height: 3px;
+            font-size: 3px;
+            margin-top: -4px;
+            margin-left: 100px;
+        }
+        #name1{
+            height: 3px;
+            font-size: 3px;
+            margin-top: -5px;
+            margin-left: 1070px;
+        }
+        #head{
+            background-color: rgba(11,81,205,0.83);
+            width: 100%;
+            height: 85px;
+        }
+        #search{
+            width: 600px;
+            height: 100%;
+            left: 600px;
+           text-align: left;
+            top: 60px;
+            float: left;
+            position: absolute;
+        }
+        #search input{
+            width: 260px;
+            margin-left: 54px;
+
+        }
+        #shop{
+            float: right;
+            height: 21px;
+            line-height: 25px;
+            width: 60px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 100px;
+            background-color: orange;
+            color: white;
+        }
+        #money{
+            float: right;
+            height: 21px;
+            line-height: 25px;
+            width: 60px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 1px;
+            background-color: orange;
+            color: white;
+        }
+        #img{
+            width: 110px;
+            height: 80%;
+            margin-left: 340px;
+            margin-top: 10px;
+            float: left;
+        }
+        #btn1{
+            float: right;
+            height: 21px;
+            line-height: 25px;
+            width: 60px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 1px;
+            background-color: orange;
+            margin-top: 2px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        #list{
+            width: 100%;
+            height: 33px;
+            background-color: rgba(7,73,205,0.83);
+            display: flex;
+            align-items: center;
+        }
+        .lists:first-child{
+            margin-left: 340px;
+        }
+        .lists{
+            width: 88px;
+            margin-left: 15px;
+            height: 98%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+        }
+        #img1{
+            cursor: pointer;
+        }
+        .imgs{
+             width: 30%;
+             height: 70%;
+             margin-top: auto;
+             margin-left: -5px;
+         }
+        .imgs1{
+            width: 20%;
+            height: 70%;
+            margin-top: auto;
+            margin-left: 5px;
+        }
+        #main{
+        width: 100%;
+            height: 320px;
+            position: relative;
+        }
+        .texts{
+            width: 180px;
+            height:320px;
+            margin-left: 340px;
+            float: left;
+            background-image: url("./1首页/mainimg.png");
+        }
+        .text{
+            width: 180px;
+            height: 64px;
+            font-size: 10px;
+            color: white;
+            text-align:left;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .text b{
+
+            font-size: 13px;
+            font-weight: bold;
+            height: 10px;
+            width: 180px;
+            text-align: center;
+            line-height: 10px;
+        }
+        #bigimg{
+            width: 630px;
+            height: 318px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 2px;
+        }
+        .shows{
+            width: 5px;
+            height: 8px;
+            position: absolute;
+            float: left;
+            margin-top: 18px;
+            left: 500px;
+            background-image: url("./1首页/mianshow.png");
+        }
+        .square{
+            width: 48px;
+            height: 20px;
+            background-image: url("./1首页/圆圈 .png");
+            margin-left: 5px;
+            text-align: center;
+            display: inline-block;
+            line-height: 20px;
+        }
+        #shows{
+            background-color: white;
+            width: 440px;
+            height: 390px;
+            float: left;
+            position: absolute;
+            left: 521px;
+            display: none;
+        }
+        .showtext{
+            width: 440px;
+            height: 51px;
+            display: flex;
+            font-size: 10px;
+            justify-content: left;
+            align-items: center;
+
+        }
+       .showtext b{
+           font-size: 13px;
+           font-weight: bold;
+           width: 55px;
+           color: blue;
+       }
+       #bluebtn{
+           width: 440px;
+           height: 51px;
+
+       }
+       #bluebtn div{
+           cursor: pointer;
+           width: 100px;
+           height: 30px;
+           margin-left: 15px;
+           margin-top: 10px;
+           background-image: url("./1首页/蓝.png");
+           font-size: 13px;
+           line-height: 30px;
+           text-align: center;
+           float: left;
+           color: white;
+       }
+       #bluebtn div img{
+           width: 5px;
+           height: 8px;
+           background-image: url("./1首页/mianshow.png");
+       }
+        .computer{
+            width: 100%;
+            height: 280px;
+
+        }
+        .computer1{
+            width: 180px;
+            height:275px;
+            margin-left: 340px;
+            float: left;
+        }
+        .comptext{
+            width: 100%;
+            height: 50px;
+            text-align: left;
+        }
+        .comptext img{
+            width: 25px;
+            height: 25px;
+            margin-top:15px;
+            float: left;
+        }
+        .comptext div{
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            font-weight:bold ;
+            line-height: 50px;
+            margin-left: 10px;
+            font-size: 18px;
+            float: left;
+        }
+        .compimg{
+            width: 100%;
+            height: 226px;
+        }
+        .compshow{
+            width: 630px;
+            height: 216px;
+            float: left;
+            margin-top: 62px;
+        }
+        .bigcompimgs{
+            float: left;
+            width: 150px;
+            height: 125px;
+            margin-left: 5px;
+            margin-top: 2px;
+        }
+        .compimgs{
+            float: left;
+            width: 150px;
+            height: 75px;
+            margin-left: 5px;
+            margin-top: 2px;
+            font-size: 13px;
+        }
+        .phone{
+            width: 90px;
+            height: 75px;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+        .phonetext{
+            width: 100%;
+            height: 50px;
+            text-align:  center;
+            font-size: 10px;
+        }
+        .phonetext b{
+            font-size: 8px;
+            color: orange;
+        }
+        .products{
+            width: 65px;
+            height: 50px;
+            margin-top: 15px;
+           float: left;
+        }
+        .protext{
+            width: 75px;
+            text-align: center;
+            height: 20px;
+            font-size: 9px;
+            color: orange;
+            font-weight:bold ;
+            float: left;
+            margin-top: 20px;
+            margin-left: 2px;
+        }
+         .money{
+            width: 15px;
+            height: 15px;
+             margin-left: 5px;
+             margin-top: 10px;
+        }
+        .products1{
+            width: 35px;
+            height: 70px;
+            margin-top: 10px;
+            float: left;
+        }
+        .money1{
+            margin-left: -90px;
+            width: 10px;
+            height: 10px;
+            margin-top: 20px;
+        }
+        .buttom{
+            width: 100%;
+            height: 3px;
+            margin-top: 211px;
+            background-color: orange;
+        }
+        #buttom{
+            width: 100%;
+            height: 240px;
+            background-image:url("./1首页/灰色底纹.png") ;
+        }
+        #btmtext{
+            width:800px;
+            text-align: center;
+            font-size: 10px;
+            height: 140px;
+            margin: 50px auto;
+        }
+        #btmtext1{
+            width: 500px;
+            height: 40px;
+            margin-top: 15px;
+            margin-left: 130px;
+            line-height: 80px;
+        }
+        #btmtext2{
+            width: 800px;
+            height: 40px;
+            line-height: 80px;
+        }
+        #btmimg{
+            width: 800px;
+            height: 100px;
+            margin: -60px auto;
+            text-align: center;
+        }
+        #btmimg img{
+            width: 100px;
+            height: 40px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="yellow"><img src="./1首页/黄色五角星.png" alt=""></div>
+    <div id="name">收藏慕课网</div>
+<div id="name1">欢迎来到慕课网[登录][免费注册]</div>
+</div>
+<div id="head">
+    <div id="img"><img src="1首页/mokeicon.png" alt=""></div>
+    <div id="search"><input type="text"><button id="money">0 <img src="./1首页/箭头.png" alt="" class="imgs1"></button>
+        <button id="shop"><img src="./1首页/购物车图标.png" alt="" class="imgs">购物车</button>
+    <button id="btn1">搜 索</button>
+    </div>
+
+</div>
+    <div id="list">
+        <span class="lists">全部商品分类</span>
+        <span id="img1"><img src="./1首页/三角箭头.png" alt=""></span>
+        <span class="lists">数码城</span>
+        <span class="lists">天黑黑</span>
+        <span class="lists">团购</span>
+        <span class="lists">发现</span>
+        <span class="lists">二手特卖</span>
+        <span class="lists">名品会</span>
+    </div>
+    <div id="main">
+        <div class="texts">
+<div class="text">
+    &nbsp&nbsp<b>手机 数码 <span class="square">合约机</span></b>
+    <span class="shows"></span><br/>
+    &nbsp&nbsp荣耀3X 单反 智能设备
+
+</div>
+<div class="text">
+    &nbsp&nbsp<b>电脑 硬件外设 <span class="square">装机宝</span></b>
+    <span class="shows"></span><br/>
+    &nbsp&nbsp笔记本 台式机 超极本 平板
+</div>
+    <div class="text">
+        &nbsp&nbsp<b>大家电</b>
+        <span class="shows"></span><br/>
+
+        &nbsp&nbsp电视 空调 冰箱 洗衣机
+
+    </div>
+    <div class="text">
+        &nbsp&nbsp<b>厨房空调 生活电器</b>
+        <span class="shows"></span><br/>
+        &nbsp&nbsp空气净化器 微波炉 取暖设备
+    </div>
+        <div class="text">
+            &nbsp&nbsp<b>食品/饮料/生鲜 </b> &nbsp<span class="square">粮油</span>
+            <span class="shows"></span><br/>
+            &nbsp&nbsp进口 方便面 零食 保健
+
+        </div></div>
+        <div id="bigimg"><img src="./1首页/bigimg.png" alt="">
+    </div>
+        <div id="shows">
+        <div class="showtext">
+            <b>电脑整机</b>
+            笔记本 &nbsp&nbsp超极本 &nbsp&nbsp上网本 &nbsp&nbsp本版电脑 &nbsp&nbsp台式机
+        </div>
+        <div class="showtext">
+            <b>装机配件</b>
+            CPU &nbsp硬盘 &nbspSSD库台硬盘 &nbsp内存 &nbsp显示 &nbsp器智能显示器 &nbsp主板 &nbsp显卡 &nbsp机箱 &nbsp电源 <br/>
+            散热器 &nbsp刻录盘/光驱 &nbsp声卡 &nbsp拓展卡 &nbsp服务器配件 &nbspDTY小附件 &nbsp装机/配件安装
+        </div>
+        <div class="showtext">
+            <b>整机附件</b>
+            电脑包 &nbsp电脑桌 &nbsp电池 &nbsp电源适配器 &nbsp贴膜 &nbsp清洁用品 &nbsp笔记本散热器 &nbspUSB拓展<br/>
+            平板配件 &nbsp特色附件 &nbsp插座网线/电话线 &nbsp影音线材 &nbsp电脑线材
+        </div>
+        <div class="showtext">
+            <b>电脑外设</b>
+            鼠标 &nbsp键盘 &nbsp游戏外设 &nbsp移动键盘 &nbsp摄像头 &nbsp高清播放器 &nbsp外置盒 &nbsp移动硬盘包<br/>
+            手写板/绘图板
+        </div>
+        <div class="showtext">
+            <b>网络设备</b>
+            路由器  &nbsp网卡  &nbsp3G无限上网 &nbsp交换机 &nbsp网络存储 &nbsp布线工具 &nbsp网络配件 &nbsp正版软件
+        </div>
+        <div class="showtext">
+            <b>影评设备</b>
+            音箱 &nbsp  耳机/耳麦  &nbsp 麦克风 &nbsp  声卡  &nbsp 音频附件 &nbsp  录音笔
+        </div>
+            <div id="bluebtn">
+                <div>电脑整机频道 &nbsp&nbsp<img src="./1首页/mianshow.png" alt=""></div>
+                <div>硬件/外设频道 &nbsp<img src="./1首页/mianshow.png" alt=""></div>
+            </div>
+    </div>
+    </div>
+    <div class="computer">
+  <div class="computer1">
+<div class="comptext"><img src="./1首页/computer1.png" alt="">
+    <div>家用电脑</div>
+</div>
+      <div class="compimg"><img src="./1首页/compimg.png" alt=""></div>
+  </div>
+        <div class="compshow">
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/phone.png" alt=""></div>
+                <div class="phonetext">
+                    HTC新渴望8系列<br/>
+                    <b>1889元</b>
+                </div>
+            </div>
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/phone.png" alt=""></div>
+                <div class="phonetext">
+                    HTC新渴望8系列<br/>
+                    <b>1889元</b>
+                </div>
+            </div>
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/phone.png" alt=""></div>
+                <div class="phonetext">
+                    HTC新渴望8系列<br/>
+                    <b>1889元</b>
+                </div>
+            </div>
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/phone.png" alt=""></div>
+                <div class="phonetext">
+                    HTC新渴望8系列<br/>
+                    <b>1889元</b>
+                </div>
+            </div>
+            <div class="compimgs">
+                <div class="products">
+                    <img src="./1首页/proimg.png" alt="">
+                </div>
+                <div class="protext">NFC技术一碰轻松配对接触屏幕</div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money">149.00
+            </div>
+            <div class="compimgs">
+                <div class="products">
+                    <img src="./1首页/proimg2.png" alt="">
+                </div>
+                <div class="protext">Samsung三星G<br/>
+                ALAXY Grand2
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money">2000.00
+            </div>
+            <div class="compimgs">
+                <div class="products">
+                    <img src="./1首页/proimg3.png" alt="">
+                </div>
+                <div class="protext">全网低价 Apple<br/>
+                    苹果iPad mini1
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money">1888.00
+            </div>
+            <div class="compimgs">
+                <div class="products">
+                    <img src="./1首页/proimg4.png" alt="">
+                </div>
+                <div class="protext">Apple苹果 全新<br/>
+                Retina屏
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money">20020.00
+            </div>
+            <div class="buttom"></div>
+        </div>
+
+    </div>
+    <div class="computer">
+        <div class="computer1">
+            <div class="comptext"><img src="./1首页/computer1.png" alt="">
+                <div>食品酒水</div>
+            </div>
+            <div class="compimg"><img src="./1首页/foodnew.png" alt=""></div>
+        </div>
+        <div class="compshow">
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/foodimg.png" alt=""></div>
+                <div class="phonetext">
+                    三月美食狂享购<br/>
+                    <b>50元</b>
+                </div>
+            </div>
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/foodimg.png" alt=""></div>
+                <div class="phonetext">
+                    三月美食狂享购<br/>
+                    <b>40元</b>
+                </div>
+            </div>
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/foodimg.png" alt=""></div>
+                <div class="phonetext">
+                    三月美食狂享购<br/>
+                    <b>30元</b>
+                </div>
+            </div>
+            <div class="bigcompimgs">
+                <div class="phone"><img src="./1首页/foodimg.png" alt=""></div>
+                <div class="phonetext">
+                    三月美食狂享购<br/>
+                    <b>20元</b>
+                </div>
+            </div>
+            <div class="compimgs">
+                <div class="products1">
+                    <img src="./1首页/其他零食.png" alt="">
+                </div>
+                <div class="protext">康比特 维他保咀<br/>
+                    嚼片 60片
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money1">600.00
+            </div>
+            <div class="compimgs">
+                <div class="products1">
+                    <img src="./1首页/其他零食.png" alt="">
+                </div>
+                <div class="protext">康比特 维他保咀<br/>
+                    嚼片 60片
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money1">400.00
+            </div>
+            <div class="compimgs">
+                <div class="products1">
+                    <img src="./1首页/其他零食.png" alt="">
+                </div>
+                <div class="protext">康比特 维他保咀<br/>
+                    嚼片 60片
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money1">200.00
+            </div>
+            <div class="compimgs">
+                <div class="products1">
+                    <img src="./1首页/其他零食.png" alt="">
+                </div>
+                <div class="protext">康比特 维他保咀<br/>
+                    嚼片 60片
+                </div>
+                <br/><br/>
+                <img src="./1首页/符号.png" alt="" class="money1">100.00
+            </div>
+            <div class="buttom"></div>
+        </div>
+    </div>
+    <div id="buttom">
+        <div id="btmtext">
+            <div id="btmtext1">慕课简介|慕课公告|招贤纳士|联系我们|客服热线： 400-675-1234</div>
+            <div id="btmtext2">Copyright 2006-2014 慕课版权所有 京ICP备09037834号 京ICP证B1034-8373号 某市公安局XX分局备案编号：12345678</div>
+        </div>
+        <div id="btmimg">
+            <img src="./1首页/可信网站.png" alt="">
+            <img src="./1首页/可信网站.png" alt="">
+            <img src="./1首页/可信网站.png" alt="">
+            <img src="./1首页/可信网站.png" alt="">
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('.lists').hover(function () {
+            $(this).css('backgroundColor','rgba(15,146,205,0.83)')
+        },function () {
+            $(this).css('backgroundColor','')
+        });
+        $('.text').hover(function () {
+            $(this).css("backgroundColor","white");
+            $(this).css('color','black');
+            $('#shows').show();
+        },function () {
+            $(this).css("backgroundColor","");
+            $(this).css('color','white');
+            $('#shows').hide();
+        })
+    })
+</script>
+</body>
+</html>
